@@ -16,8 +16,15 @@
   margin-bottom: 5px;
   position: relative;
   margin-top: 6px;
+  height: 100vh;
+
   
 }
+.container{
+  background-color: black;
+  /* max-height: 800vh; */
+}
+
 
 .home {
   padding: 1px;
@@ -38,7 +45,7 @@
 }
 .lib {
   margin-top: 10px;
-  height: 85vh;
+  height: 105vh;
   border-radius: 7px;
 
 
@@ -119,6 +126,12 @@ input[type="reset"] {
   cursor: pointer;
   outline: inherit;
 }
+
+.rounded{
+  height: 120vh;
+
+}
+
 .rightheading {
   display: flex;
 }
@@ -241,7 +254,7 @@ input[type="reset"] {
 }
 .playlist {
   overflow-y: scroll;
-  max-height: 75vh;
+  max-height: 90vh;
 }
 
 /* ****playbar***** */
@@ -255,14 +268,14 @@ input[type="reset"] {
 .liblogo3 {
   margin: 10px;
   /* margin-top: 15px; */
-  width: 25px;
+  width: 27px;
 }
 
 .songslist ul {
   padding: 0px 13px;
-  height: 450px;
+  height: 600px;
   /* margin: 10px; */
-  overflow: auto;
+  overflow: scroll;
 }
 
 .songslist ul li {
@@ -396,6 +409,7 @@ input[type="reset"] {
   /* border: 2px solid rgb(21, 73, 136); */
   display: flex;
   justify-content: space-evenly;
+  z-index: 3;
 }
 .playbar-right{
   height: 80px;
@@ -443,18 +457,34 @@ input[type="reset"] {
   margin-left: 10px;
 }
 
-/* Responsive */
-/* @media (max-width: 1400px) {
+.close{
+  display: none;
+}
+
+/* Responsive  */
+ @media (max-width: 1400px) {
   .left {
+    padding: 5px;
     position: absolute;
-    left: -100%;
+    left: -150%;
     transition: all 0.3s;
     z-index: 1;
-    width: 230px;
+    width: 300px;
+    background-color: black;
+    z-index: 1;
   }
+  .close{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 270px;
+    top: 10px;
+    /* z-index: 3; */
+  }
+  
 
   .right {
-    width: 75vw;
+    width: 100vw;
   }
   .playbar {
     width: 95vw;
@@ -464,5 +494,21 @@ input[type="reset"] {
 
   .hamburger {
     display: block;
+    margin-left: 15px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    width: 30px;
+
   }
-} */
+
+  .hamburgerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+}

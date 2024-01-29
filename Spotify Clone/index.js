@@ -260,6 +260,31 @@ async function main() {
         .getElementsByTagName("input")[0].value = 50;
     }
   });
+
+
+
+  //Add event listner for Hamburger
+  // ********$$$$$$$$********
+  document.querySelector(".hamburger").addEventListener("click",()=>{
+    document.querySelector(".left").style.left= "0"
+
+  })
+
+  // ********$$$$$$$$********
+  //Add event listner for close button
+  document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".left").style.left= "-110%"
+
+  })
+
+
+
+
+
+
+
+
+
 }
 
 main();
